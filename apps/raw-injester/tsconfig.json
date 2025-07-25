@@ -1,26 +1,12 @@
 {
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": "@repo/typescript-config/base.json",
   "compilerOptions": {
-    "target": "ES2022",
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
+    "target": "ES2020",
+    "module": "ESNext",
+    "outDir": "dist",
+    "moduleResolution": "Node",
     "esModuleInterop": true,
-    "allowJs": false,
-    "checkJs": false,
-    "outDir": "./dist",
     "strict": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": false,
-    "baseUrl": ".",
-    "types": ["node"],
-    "paths": {
-      "~/*": ["./src/*"]
-    }
+    "skipLibCheck": true
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "dist", "**/*.js"]
+  "include": ["src"]
 }

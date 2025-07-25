@@ -4,14 +4,10 @@ meta {
   seq: 2
 }
 
-post {
-  url: {{base-url}}/push-raw
+get {
+  url: {{base-url}}/health
   body: json
   auth: none
-}
-
-headers {
-  Content-Type: application/json
 }
 
 body:json {
