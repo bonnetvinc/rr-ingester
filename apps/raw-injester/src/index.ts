@@ -90,10 +90,19 @@ server.get('/health', async (request, reply) => {
   return { status: 'ok' };
 });
 
-server.listen({ port: env.INJESTER_API_PORT, host: env.INJESTER_API_HOST }, (err, address) => {
-  if (err) {
-    console.error(err);
-    process.exit(1);
-  }
-  console.log(`Server listening at ${address}`);
-});
+// For local development
+if (!process.env.VERCEL) {
+  server.listen({ port: env.INJESTER_API_PORT, host: env.INJESTER_API_HOST }, (err, address) => {
+    if (err) {
+      console.error(err);
+      process.exit(1);
+    }
+    console.log(`Server listening at ${address}`);
+  });
+}
+
+// For Vercel deployment
+export default async (req: any, res: any) => {
+  await server.ready();
+  server.server.emit('request', req, res);
+};
