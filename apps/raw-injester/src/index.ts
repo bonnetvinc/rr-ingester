@@ -92,7 +92,7 @@ server.get('/health', async (request, reply) => {
 
 // For local development
 if (!process.env.VERCEL) {
-  server.listen({ port: env.INJESTER_API_PORT, host: env.INJESTER_API_HOST }, (err, address) => {
+  server.listen((err, address) => {
     if (err) {
       console.error(err);
       process.exit(1);
