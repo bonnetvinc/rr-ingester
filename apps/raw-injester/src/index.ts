@@ -3,7 +3,6 @@ import { env } from './env.js';
 import cors from '@fastify/cors';
 import fastifySwagger from '@fastify/swagger';
 import fastifySwaggerUi from '@fastify/swagger-ui';
-import { getAIResponse } from './service/chat/index.js';
 
 const server = fastify({
   logger: true
