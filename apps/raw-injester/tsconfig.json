@@ -1,12 +1,11 @@
 {
   "compilerOptions": {
     "target": "ES2022",
-    "module": "ESNext",
-    "moduleResolution": "Node",
+    "module": "CommonJS",
     "outDir": "dist",
-    "rootDir": ".",
+    "rootDir": "api",
     "esModuleInterop": true,
-    "skipLibCheck": true, 
+    "moduleResolution": "node"
   },
-   "include": ["api/**/*"]
+  "include": ["api"]
 }
