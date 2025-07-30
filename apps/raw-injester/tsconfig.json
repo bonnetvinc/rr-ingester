@@ -3,13 +3,11 @@
     "target": "ES2022",
     "module": "ESNext",
     "moduleResolution": "node",
-    "outDir": "dist",
-    "rootDir": "src",
     "esModuleInterop": true,
-    "skipLibCheck": true,
+    "outDir": "dist",
     "strict": true,
-    "resolveJsonModule": true,
-    "allowSyntheticDefaultImports": true
+    "skipLibCheck": true,
+    "types": ["@vercel/node", "node"]
   },
-  "include": ["src"]
+  "include": ["api"]
 }
