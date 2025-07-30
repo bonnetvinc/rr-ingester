@@ -4,9 +4,9 @@
     "module": "ESNext",
     "moduleResolution": "Node",
     "outDir": "dist",
-    "strict": true,
+    "rootDir": ".",
     "esModuleInterop": true,
-    "skipLibCheck": true
+    "skipLibCheck": true, 
   },
-  "include": ["api"]
+   "include": ["api/**/*"]
 }
