@@ -1,0 +1,31 @@
+{
+  "name": "rr-ingester",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "check-types": "turbo run check-types",
+    "db:generate": "pnpm --filter @repo/database db:generate",
+    "db:force-push": "pnpm --filter @repo/database db:force-push",
+    "db:migrate": "pnpm --filter @repo/database db:migrate",
+    "biome:check": "biome check .",
+    "biome:format": "biome check && biome organize-imports"
+  },
+  "dependencies": {
+    "@prisma/client": "6.13.0",
+    "@prisma/nextjs-monorepo-workaround-plugin": "^6.13.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.1.2",
+    "prettier": "^3.6.2",
+    "prisma": "^6.10.1",
+    "turbo": "^2.5.5",
+    "typescript": "5.8.3"
+  },
+  "packageManager": "pnpm@9.0.0",
+  "engines": {
+    "node": ">=18"
+  }
+}

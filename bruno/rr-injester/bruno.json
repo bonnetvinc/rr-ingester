@@ -1,0 +1,6 @@
+{
+  "version": "1",
+  "name": "rr-injester",
+  "type": "collection",
+  "ignore": ["node_modules", ".git"]
+}

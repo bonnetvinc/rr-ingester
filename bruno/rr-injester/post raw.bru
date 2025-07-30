@@ -1,0 +1,52 @@
+meta {
+  name: post raw
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{base-url}}/push-raw
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "ID": 19179,
+    "PID": 60,
+    "TimingPoint": "DÉPARTARRIVÉE",
+    "Result": -10,
+    "Time": 72098.703,
+    "Invalid": false,
+    "Passing": {
+      "Transponder": "3001",
+      "Position": {
+        "Latitude": 45.710935,
+        "Longitude": -73.663462,
+        "Altitude": 0,
+        "Flag": ""
+      },
+      "Hits": 42,
+      "RSSI": -56,
+      "Battery": 0,
+      "Temperature": 0,
+      "WUC": 0,
+      "LoopID": 0,
+      "Channel": 0,
+      "InternalData": "",
+      "StatusFlags": 0,
+      "DeviceID": "D-55531",
+      "DeviceName": "D-55531",
+      "OrderID": 218386,
+      "Port": 1,
+      "IsMarker": false,
+      "FileNo": 92,
+      "PassingNo": 722,
+      "Customer": 73914,
+      "Received": "2025-07-17T00:01:40.06Z",
+      "UTCTime": "2025-07-16T20:01:38.703-04:00"
+    },
+    "Bib": 3002
+  }
+  
+}
