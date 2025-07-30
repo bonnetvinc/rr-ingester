@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "apps/raw-injester/dist/api/index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "apps/raw-injester/dist/api/index.js"
+    }
+  ],
+  "buildCommand": "pnpm --filter @repo/database db:migrate-deploy && pnpm --filter @repo/database db:generate && pnpm --filter raw-injester build",
+  "installCommand": "pnpm install"
+}
