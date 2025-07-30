@@ -22,7 +22,7 @@
     "clean": "rimraf dist node_modules .turbo dist .cache",
     "dev": "dotenv -e ../../.env -- tsx watch api/index.ts",
     "check-types": "tsc --noEmit",
-    "vercel-build": "pnpm --filter @repo/database db:migrate-deploy && pnpm --filter @repo/database db:generate && pnpm build",
+    "vercel-build": "pnpm --filter @repo/database db:migrate-deploy && pnpm --filter @repo/database db:generate && pnpm build"
  
   },
   "devDependencies": {
