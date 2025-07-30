@@ -14,10 +14,7 @@
   ],
   "functions": {
     "dist/api/index.js": {
-      "includeFiles": [
-        "packages/database/**",
-        "node_modules/@prisma/**"
-      ]
+      "includeFiles": "packages/database/**,node_modules/@prisma/**"
     }
   },
   "buildCommand": "pnpm --filter @repo/database db:migrate-deploy && pnpm --filter @repo/database db:generate && pnpm build"
