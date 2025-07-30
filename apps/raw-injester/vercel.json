@@ -1,17 +1,8 @@
 {
-  "version": 2,
-  "builds": [
+  "rewrites": [
     {
-      "src": "dist/api/index.js",
-      "use": "@vercel/node"
+      "source": "/(.*)",
+      "destination": "/dist/api"
     }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "dist/api/index.js"
-    }
-  ],
-  "buildCommand": "pnpm --filter @repo/database db:migrate-deploy && pnpm --filter @repo/database db:generate && pnpm --filter raw-injester build",
-  "installCommand": "pnpm install"
+  ]
 }
