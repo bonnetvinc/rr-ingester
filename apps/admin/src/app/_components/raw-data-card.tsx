@@ -1,5 +1,4 @@
 import type { RawPassing } from '@repo/database';
-import React from 'react';
 
 type RawDataCardProps = {
   data: RawPassing; // Replace 'any' with the actual type of your raw data
